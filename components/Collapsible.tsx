@@ -1,5 +1,5 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { PropsWithChildren, useState } from 'react';
+import { PropsWithChildren, Ref, useState } from 'react';
 import { StyleSheet, TouchableOpacity, useColorScheme } from 'react-native';
 
 import { ThemedText } from '@/components/ThemedText';
@@ -30,8 +30,10 @@ export function Collapsible({ children, title }: PropsWithChildren & { title: st
 
 const styles = StyleSheet.create({
   heading: {
+    width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
+    paddingVertical: 12,
     gap: 6,
   },
   content: {
